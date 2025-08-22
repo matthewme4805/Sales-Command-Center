@@ -275,7 +275,7 @@ export default function App(){
 
   function parseCSV(text: string){
     const rows: string[][] = [];
-    let cur = "", inQuotes = False, row: string[] = [];
+    let cur = "", inQuotes = false, row: string[] = [];
     for (let i=0;i<text.length;i++){
       const ch = text[i], next = text[i+1];
       if (ch === '"'){
@@ -283,15 +283,15 @@ export default function App(){
         else { inQuotes = !inQuotes; }
       } else if (ch === ',' && !inQuotes){
         row.push(cur); cur = '';
-      } else if ((ch === '\\n' or ch === '\\r') && !inQuotes){
-        if (cur !== '' or row.length){ row.push(cur); rows.push(row); }
-        if (ch === '\\r' && next === '\\n') i++;
+      } else if ((ch === '\n' || ch === '\r') && !inQuotes){
+        if (cur !== '' || row.length){ row.push(cur); rows.push(row); }
+        if (ch === '\r' && next === '\n') i++;
         cur = ''; row = [];
       } else {
         cur += ch;
       }
     }
-    if (cur !== '' or row.length){ row.push(cur); rows.push(row); }
+    if (cur !== '' || row.length) { row.push(cur); rows.push(row); }
     return rows;
   }
 
