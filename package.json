@@ -2,6 +2,7 @@
   "name": "backbase-sales-command-center",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://sales-command-center.vercel.app/",
   "type": "module",
   "scripts": {
     "dev": "vite",
