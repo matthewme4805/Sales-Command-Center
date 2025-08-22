@@ -1,0 +1,29 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* mimic shadcn defaults lightly */
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-2xl border px-3 py-2 text-sm; }
+.btn-default { @apply bg-black text-white border-black; }
+.btn-secondary { @apply bg-white text-black border-gray-300; }
+.btn-ghost { @apply border-transparent; }
+.card { @apply rounded-2xl border border-gray-200 bg-white shadow-sm; }
+.card-header { @apply px-4 pt-4; }
+.card-title { @apply text-sm font-semibold; }
+.card-content { @apply p-4; }
+.badge { @apply inline-flex items-center rounded-full border px-2 py-0.5 text-xs; }
+.badge-outline { @apply border-gray-300; }
+.badge-default { @apply bg-black text-white border-black; }
+.badge-secondary { @apply bg-gray-100 text-black border-gray-200; }
+.input { @apply h-9 rounded-xl border px-3 text-sm; }
+.separator { @apply border-t; }
